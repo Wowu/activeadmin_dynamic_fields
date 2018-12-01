@@ -47,11 +47,11 @@ function dfSetupField( el ) {
     });
   }
   else if( action == 'slide' ) {
-    if( dfEvalCondition( el, args, false ) ) target.slideDown();
-    else target.slideUp();
+    if( dfEvalCondition( el, args, false ) ) target.slideDown('fast');
+    else target.slideUp('fast');
     el.on( 'change', function( event ) {
-      if( dfEvalCondition( $(this), args, true ) ) target.slideDown();
-      else target.slideUp();
+      if( dfEvalCondition( $(this), args, true ) ) target.slideDown('fast');
+      else target.slideUp('fast');
     });
   }
   else if( action == 'fade' ) {
